@@ -2,23 +2,22 @@
 using namespace std;
 
 
-string reversed(string str)
+string reversed(int arr[])
 {
     int p=0;
-    int q=str.size()-1;
+    int q=arr.size()-1;
     while(p<q)
     {
-        swap(str[p],str[q]);
+        swap(arr[p],arr[q]);
         p++;
         q--;
     }
-    return str;
+    return arr;
 }
 
 int main()
 {
-    string str;
-    cin>>str;
-    cout<<reversed(str)<<endl;
+    int arr[]={1,2,3,4,5};
+    reversed(arr);
     return 0;
 }
